@@ -16,7 +16,7 @@ window.onload = function () {
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
-delay(2300).then(() => dark.style.visibility = "hidden");
+delay(2800).then(() => dark.style.visibility = "hidden");
 
 /*Sounds*/
 const WarpBeam = new Audio();
