@@ -18,12 +18,22 @@ window.onload = function () {
 	AstrologyDesk.style.visibility = "hidden"
 	Mushrooms.style.visibility = "hidden"
 	SpiningMoney.style.visibility = "hidden"
+	AstrologyDesk.style.visibility = "hidden"
+	RadiationDangerPass.style.visibility = "hidden"
+	PassControle.style.visibility = "hidden"
+	RadiationLogoConfirm.style.visibility = "hidden"
+	ZodiacSign1.style.visibility = "hidden"
+	AngelicNose.style.visibility = "hidden"
+	ChooseCorrectDialog.style.visibility = "hidden"
+	HelpEye.style.visibility = "hidden"
+	EyeStory.style.visibility = "hidden"
 
 }
+
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
-delay(5000).then(() => dark.style.visibility = "hidden");
+delay(500).then(() => dark.style.visibility = "hidden");
 
 /*Sounds*/
 const WarpBeam = new Audio();
@@ -36,6 +46,12 @@ const RAVESTYLE_2011 = new Audio();
 RAVESTYLE_2011.src = "sounds/RAVESTYLE_2011.mp3";
 const Never_Stop = new Audio();
 Never_Stop.src = "sounds/Never_Stop.mp3";
+const AngelicTeleport = new Audio();
+AngelicTeleport.src = "sounds/AngelicTp.mp3";
+const AngelicLoop = new Audio();
+AngelicLoop.src = "sounds/AngelicLoop.mp3";
+const MorseCode = new Audio();
+MorseCode.src = "sounds/MorseCode.mp3";
 
 /* Variables */
 let RandomPositionX = Math.ceil(Math.random() * 100);
@@ -80,9 +96,14 @@ let TwoMasks = document.getElementById("TwoMasks")
 let FairyFlight = document.getElementById("FairyFlight")
 let FairyDialog1 = document.getElementById("FairyDialog1")
 
-/* Plate3*/
+/* Plate3 */
 let Church1 = document.getElementById("Church1")
 let RadiationLogo = document.getElementById("RadiationLogo")
+
+/* Plate4 */
+let RadiationLogoConfirm = document.getElementById("RadiationConfirm")
+let PassControle = document.getElementById("PassControle")
+let RadiationDangerPass = document.getElementById("RadiationDangerPass")
 
 /* Masks */
 let MaskGallery = document.getElementById("MaskGallery")
@@ -102,6 +123,17 @@ let EyeSkeleton = document.getElementById("EyeSkeleton")
 let AstrologyDesk = document.getElementById("AstrologyDesk")
 let Mushrooms = document.getElementById("Mushrooms")
 let SpiningMoney = document.getElementById("SpiningMoney")
+
+/* Radiation */
+let HelpEye = document.getElementById("HelpEye")
+let EyeStory = document.getElementById("EyeStory")
+
+/* ZodiacSign1 */
+let ZodiacSign1 = document.getElementById("ZodiacSign1")
+
+/* HeavenChoose */
+let AngelicNose = document.getElementById("AngelicNose")
+let ChooseCorrectDialog = document.getElementById("ChooseCorrectDialog")
 
 function Plate1Tp() {
 	WarpBeam.play();
@@ -142,6 +174,19 @@ function Plate3Tp() {
 	plate4.style.visibility = "hidden"
 	Church1.style.visibility = "visible"
 	RadiationLogo.style.visibility = "visible"
+}
+function Plate4Tp() {
+	WarpBeam.play();
+	Logo.style.visibility = "hidden"
+	inf5.style.visibility = "hidden"
+	JumpVideo1.style.visibility = "hidden"
+	plate1.style.visibility = "hidden"
+	plate2.style.visibility = "hidden"
+	plate3.style.visibility = "hidden"
+	plate4.style.visibility = "hidden"
+	RadiationDangerPass.style.visibility = "visible"
+	PassControle.style.visibility = "visible"
+	RadiationLogoConfirm.style.visibility = "visible"
 }
 function Heart1Tp() {
 	WarpBeam.play();
@@ -192,7 +237,64 @@ function ChurchTp() {
 	AstrologyDesk.style.visibility = "visible"
 	Mushrooms.style.visibility = "visible"
 	SpiningMoney.style.visibility = "visible"
+	document.title = "8235"
 	var myInterva3 = setInterval(function() {
     Never_Stop.play();
 	}, 100);
+}
+function RadiationTp() {
+	if (PassControle.value == "8235" ) {
+	WarpBeam.play();	
+	var myInterval4 = setInterval(function() {
+		let RandomPositionX = Math.ceil(Math.random() * 1000) + "px"
+		let RandomPositionY = Math.ceil(Math.random() * 300) + "px";
+		ZodiacSign1.style.left = RandomPositionX;
+		ZodiacSign1.style.top = RandomPositionY;
+	}, 350);
+	ZodiacSign1.style.visibility = "visible"
+	} else {
+		Yinyang1Tp();
+	}
+	RadiationDangerPass.style.visibility = "hidden"
+	PassControle.style.visibility = "hidden"
+	RadiationLogoConfirm.style.visibility = "hidden"
+}
+function RadiationSuccessTp() {
+	document.body.style.backgroundImage = "url('images/HeavenBG.jpg')";
+	document.body.style.backgroundSize = "150% 800%"
+	ZodiacSign1.style.visibility = "hidden"
+	AngelicNose.style.visibility = "visible"
+	ChooseCorrectDialog.style.visibility = "visible"
+	AngelicTeleport.play();
+	var myInterva5 = setInterval(function() {
+    AngelicLoop.play();
+	}, 100);
+}
+function RadiationLogoTp() {
+	WarpBeam.play();
+	Church1.style.visibility = "hidden"
+	RadiationLogo.style.visibility = "hidden"
+	HelpEye.style.visibility = "visible"
+	EyeStory.style.visibility = "visible"
+	var myInterval6 = setInterval(function() {
+		let RandomText = Math.ceil(Math.random() * 8);
+		if (RandomText == "1") {
+			EyeStory.innerHTML = "ነፍስኻ ብዘይእመን ሓይሊ ኣልቦነት ክትዓርፍ ከላ እታ ለይቲ ራዕዲ ተሰሚዑካ ይፈልጥ ድዩ"
+		} else if (RandomText == "2") {
+			EyeStory.innerHTML = "ነዚ ቦታ ሰሚዕካዮ ትፈልጥ ትኸውን - ናይ ቀደምን ዝተደርበየን ናይ ስነ-ኣእምሮ ሆስፒታል። "
+		} else if (RandomText == "3") {
+			EyeStory.innerHTML = "ነፍሳት ኣብ ጸልማትን መዓሙቕ ዘይብሉ ጭንቀትን ዝተዓጽዋሉ ቦታ። ሓዘንን ተስፋ ምቑራጽን ዝመልአ"
+		} else if (RandomText == "4") {
+			EyeStory.innerHTML = "እዚ ቦታ እዚ ኣብ ምድሪ ሲኦል እዩ ነይሩ። እዚ ጥራይ ግን ኣብ ቆርበት ፍርሒ ዘልዕል ኣይኮነን።"
+		} else if (RandomText == "5") {
+			EyeStory.innerHTML = "ናብዚ ሆስፒታል ምስ ኣተኻ ሕልሚ ቀትሪ ዝስዕበካ ኮይኑ ይስምዓካ። ኣብ ዘይብጻሕ ኩርናዓት መብራህቲ ትራፊክ"
+		} else if (RandomText == "6") {
+			EyeStory.innerHTML = "ኣብ ነፍሲ ወከፍ እትወስዶ ስጉምቲ እናዓበየ ዝኸይድ ጽላሎታዊ ሕሹኽታታት ትሰምዕ። ናይ ገዛእ ርእስኻ ሓሳባት ይፈርሓካ።"
+		} else if (RandomText == "7") {
+			EyeStory.innerHTML = "እቶም ሓደ እዋን ኣብ ውሽጢ እዞም መናድቕ ዝነበሩ ገጾም ብህይወቶምን ኣእምሮኦምን ተቐዲዶም ትርእዮም።"
+		} else if (RandomText == "8") {
+			EyeStory.innerHTML = "መውጽኢ መንገዲ ትደሊ፡ ኩሎም ማዕጾታት ግን ሓደ ዓይነት ይመስሉ፡ ብዘይካ ጸልማት ናብ ዝኾነ ቦታ ኣይመርሑን እዮም።"
+		}
+		MorseCode.play();
+	}, 1000);
 }
