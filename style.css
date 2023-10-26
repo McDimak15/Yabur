@@ -193,7 +193,7 @@ body {
 }
 #Church1 {
 	position: absolute;
-	left: 41%;
+	left: 43.5%;
 	bottom: 60%;
 }
 #RadiationLogo {
@@ -221,6 +221,60 @@ body {
 	left: 72%;
 	bottom: 15%;
 	animation: pulse 200ms infinite, contrast 50ms infinite;
+}
+#HelpEye {
+	position: absolute;
+	width: 30%;
+	top: 10%;
+	right: 33%;
+	height: 35%;
+	animation: SmallBlinking 450ms infinite;
+}
+#EyeStory {
+	position: absolute;
+	font-size: 200%;
+	color: white;
+	left: 23%;
+	top: 50%;
+}
+#PassControle {
+	position: absolute;
+	width: 7%;
+	left: 48%;
+	top: 42%;
+}
+#RadiationDangerPass {
+	position: absolute;
+	width: 35%;
+	left: 34%;
+	top: 30%;
+	animation: pulse 500ms infinite;
+}
+#RadiationConfirm {
+	position: absolute;
+	width: 15%;
+	left: 44%;
+	top: 44%;
+	animation: pulse 5000ms infinite;
+}
+#ZodiacSign1 {
+	position: absolute;
+	width: 8%;
+	left: 750px;
+	top: 44%;
+	animation: rotating 2000ms linear infinite;
+}
+#AngelicNose {
+	position: absolute;
+	width: 25%;
+	left: 40%;
+	top: -1%;
+	animation: pulse 10000ms  infinite;
+}
+#ChooseCorrectDialog {
+	position: absolute;
+	left: 40.5%;
+	bottom: 37%;
 }
 @keyframes pulse {
 	0%{
@@ -289,19 +343,41 @@ body {
 	}
 	25%{
 		filter: brightness(10%);
-		filter: contrast(800%);
+		filter: contrast(5%);
 	}
 	50%{
-		filter: brightness(120%);
-		filter: contrast(150%);
+		filter: brightness(70%);
+		filter: contrast(50%);
 	}
 	75%{
 		filter: brightness(70%);
-		filter: contrast(180%);
+		filter: contrast(30%);
 	}
 	100%{
-		filter: brightness(180%);
+		filter: brightness(90%);
 		filter: contrast(20%);
+	}
+}
+@keyframes SmallBlinking{
+	0%{
+		filter: contrast(120%);
+		filter: brightness(90%);
+	}
+	25%{
+		filter: contrast(130%);
+		filter: brightness(120%);
+	}
+	50%{
+		filter: contrast(120%);
+		filter: brightness(110%);
+	}
+	75%{
+		filter: contrast(110%);
+		filter: brightness(100%);
+	}
+	100%{
+		filter: contrast(120%);
+		filter: brightness(90%);
 	}
 }
 @media(max-width: 700px){ 
@@ -444,6 +520,21 @@ body {
 		left: 10%;
 		bottom: 10%;
 	}
+	#HelpEye {
+		position: absolute;
+		width: 90%;
+		top: 10%;
+		right: 5%;
+		height: 35%;
+		animation: SmallBlinking 450ms infinite;
+	}
+	#EyeStory {
+		position: absolute;
+		font-size: 200%;
+		color: white;
+		left: 13%;
+		top: 50%;
+	}
 	#AstrologyDesk {
 		position: absolute;
 		left: 20%;
@@ -456,5 +547,44 @@ body {
 		left: 20%;
 		bottom: 0%;
 		animation: pulse 200ms infinite, contrast 50ms infinite;
+	}
+	#PassControle {
+		position: absolute;
+		width: 25%;
+		left: 37.5%;
+		top: 36%;
+		height: 5%;
+		font-size: 200%;
+	}
+	#RadiationDangerPass {
+		position: absolute;
+		width: 95%;
+		left: 2.5%;
+		top: 25%;
+		animation: pulse 500ms infinite;
+	}
+	#RadiationConfirm {
+		position: absolute;
+		width: 75%;
+		left: 13%;
+		top: 41%;
+		animation: pulse 5000ms infinite;
+	}
+	#ZodiacSign1 {
+		position: absolute;
+		width: 20%;
+		left: 750px;
+		top: 44%;
+		animation: rotating 2000ms linear infinite;
+	}
+	#AngelicNose {
+		position: absolute;
+		width: 60%;
+		left: 20%;
+		top: -2%;
+		animation: pulse 10000ms  infinite;
+	}
+	#ChooseCorrectDialog {
+		width: 0px;
 	}
 }
